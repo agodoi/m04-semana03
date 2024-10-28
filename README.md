@@ -7,11 +7,11 @@
 Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (uso incorreto de pino para led/botão, capacitor debounce, filtragem de ruído), conceitos de ponteiros e memória para programação do microcontrolador ESP32
 
 
-# Impacto no seu Projeto
+# Impactos no seu Projeto
 
-* Resolver o problema do uso de botão para selecionar menu de opções usando o display.
-* Entendimento da alocação de memória no seu microcontrolador
-* Entendimento dos pinos do ESP32.
+* Entenderá a alocação de memória no seu microcontrolador
+* Entenderá as funções dos pinos do ESP32.  
+* Saberá como resolver o problema do uso de botão para selecionar menu de opções usando o display.
 
 ## Ponteiros
 - **Ponteiros** são variáveis que armazenam o endereço de memória de outra variável.
@@ -99,3 +99,7 @@ void loop() {}
 ```
 
 ---
+
+## Funções dos Pinos do ESP32
+
+## Prática - Montagem do Capacitor Antibounce (definir a dinâmica)
