@@ -13,6 +13,8 @@ Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (
 * Entenderá as funções dos pinos do ESP32.  
 * Saberá como resolver o problema do uso de botão para selecionar menu de opções usando o display.
 
+---
+
 ## Ponteiros
 - **Ponteiros** são variáveis que armazenam o endereço de memória de outra variável.
 - Exemplo de declaração de ponteiro:
@@ -101,5 +103,8 @@ void loop() {}
 ---
 
 ## Funções dos Pinos do ESP32
+
+
+---
 
 ## Prática - Montagem do Capacitor Antibounce (definir a dinâmica)
