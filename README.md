@@ -24,7 +24,7 @@ Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (
   ```
 - **&** é usado para obter o endereço de uma variável.
 
-- ![TABELA EXCEL](https://docs.google.com/spreadsheets/d/1zgsKqh5UbhyGN3BkQBueWcM0Ubp_ikUC9deWb7eIvBs/edit?usp=sharing)
+- [TABELA EXCEL](https://docs.google.com/spreadsheets/d/1zgsKqh5UbhyGN3BkQBueWcM0Ubp_ikUC9deWb7eIvBs/edit?usp=sharing)
 
 ### Atenção:
 - Manipulação direta de memória pode ser perigosa, devendo ser feita com cautela para evitar falhas e instabilidade do sistema.
