@@ -209,7 +209,10 @@ Observações importantes:
 4. Caso o avaliado não tenha apresentado as evidências de entrega (foto da montagem, tabela de componentes, código desenvolvido e vídeo de funcionamento) ou estas evidências estiverem inacessíveis, a atividade será passível de ser anulada.
 5. A nota será a média simples das duas avaliações, salvo os casos descritos acima.
 
-Avaliador: Nome do Avaliador
+
+### Tabela de Avaliação entre Pares
+
+#### Avaliador: Nome do Avaliador
 
 |Critério|	Contempla (Pontos)|	Contempla Parcialmente (Pontos)	|Não Contempla (Pontos)	|Observações do Avaliador|
 |-|-|-|-|-|
