@@ -149,7 +149,7 @@ void loop() {
         temperaturas[indice] = dht.readTemperature();
 
         // Avança o índice, e reseta para 0 se chegar ao número de leituras
-        indice = (indice + 1) % numLeituras;
+        indice = (indice + 1) % numLeituras; //Essa técnica é uma média móvel. Veja a tabela abaixo
 
         // Calcula a média após preencher o array
         float media = calcularMedia(temperaturas, numLeituras);
@@ -162,6 +162,19 @@ void loop() {
     // Outras tarefas podem ser executadas aqui sem interrupção
 }
 ```
+
+Exemplo Prático de Média Móvel
+Imagine que numLeituras é 5, então o array **temperaturas** tem 5 posições (índices de 0 a 4). 
+Cada vez que adicionamos uma nova leitura, queremos armazená-la no próximo índice do array:
+
+|Iteração|	indice (antes)	| indice + 1	| (indice + 1) % numLeituras	| indice (atualizado) |
+|-|-|-|-|-|
+|1	|0	|1	|1	|1|
+|2	|1	|2	|2	|2|
+|3	|2	|3	|3	|3|
+|4	|3	|4	|4	|4|
+|5	|4	|5	|0	|0|
+|6	|0	|1	|1	|1 |
 
 
 ---
