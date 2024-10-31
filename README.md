@@ -163,7 +163,8 @@ void loop() {
 }
 ```
 
-Exemplo Prático de Média Móvel
+### Exemplo Prático de Média Móvel
+
 Imagine que numLeituras é 5, então o array **temperaturas** tem 5 posições (índices de 0 a 4). 
 Cada vez que adicionamos uma nova leitura, queremos armazená-la no próximo índice do array:
 
