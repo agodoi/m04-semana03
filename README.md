@@ -4,11 +4,12 @@
 
 # Semana 03 - Conceitos de Ponteiros e Montagem do Botão Antibounce
 
-Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (uso incorreto de pino para led/botão, capacitor debounce, filtragem de ruído), conceitos de ponteiros e memória para programação do microcontrolador ESP32
+Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (uso incorreto de pino para led/botão, capacitor debounce, filtragem de ruído), conceitos de ponteiros nos vetores e memória para programação do microcontrolador ESP32
 
 
 # Impactos no seu Projeto
 
+* Entenderá a importância de vetores (arrays)
 * Entenderá a alocação de memória no seu microcontrolador
 * Entenderá as funções dos pinos do ESP32.  
 * Saberá como resolver o problema do uso de botão para selecionar menu de opções usando o display.
@@ -16,7 +17,7 @@ Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (
 ---
 
 ## Ponteiros
-- **Ponteiros** são variáveis que armazenam o endereço de memória de uma outra variável.
+- **Ponteiros** são variáveis que armazenam o endereço de memória de uma outra variável. Essa variável geralmente é um array ```int v[10] = {5, 10, 15, 3, 10, 76, 5, 13, 33, 45};```
 - Exemplo de declaração de ponteiro:
   ```cpp
   int x = 9;
