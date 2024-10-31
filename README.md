@@ -96,7 +96,7 @@ void setup(){
   Serial.println((int)&pt);
   Serial.print("Valor de pt: ");
   Serial.println((int)pt);
-  Serial.print("Valor apontado por pt: ");
+  Serial.print("Conteudo apontado por pt: "); //sem acento para não quebrar a msg
   Serial.println(*pt);
 }
 
