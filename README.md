@@ -111,11 +111,11 @@ void loop() {}
 #include <DHT.h>
 
 // Definindo o pino do sensor e o tipo (DHT22)
-#define pinDHT 4
-#define modeloSensor DHT22
+#define DHTPIN 4
+#define DHTTYPE DHT22
 
 // Instanciando o sensor DHT
-DHT meudht(pinDHT, modeloSensor);
+DHT dht(DHTPIN, DHTTYPE);
 
 // Variáveis para controle de tempo e leituras
 const unsigned long intervaloLeitura = 2000; // 2 segundos
@@ -135,7 +135,7 @@ float calcularMedia(float *leituras, int tamanho) {
 
 void setup() {
     Serial.begin(115200);
-    meudht.begin();
+    dht.begin();
 }
 
 void loop() {
@@ -146,7 +146,7 @@ void loop() {
         ultimoTempoLeitura = tempoAtual;  // Atualiza o último tempo de leitura
 
         // Lê a temperatura e armazena no array usando o índice atual
-        temperaturas[indice] = meudht.readTemperature();
+        temperaturas[indice] = dht.readTemperature();
 
         // Avança o índice, e reseta para 0 se chegar ao número de leituras
         indice = (indice + 1) % numLeituras;
@@ -155,14 +155,12 @@ void loop() {
         float media = calcularMedia(temperaturas, numLeituras);
 
         // Exibe a média no monitor serial
-        Serial.print("Media de Temperatura: ");
+        Serial.print("Média de Temperatura: ");
         Serial.println(media);
     }
 
     // Outras tarefas podem ser executadas aqui sem interrupção
 }
-
-
 ```
 
 
