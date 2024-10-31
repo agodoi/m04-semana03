@@ -16,13 +16,15 @@ Entendimento básico da arquitetura de um microcontrolador para dominar Pinout (
 ---
 
 ## Ponteiros
-- **Ponteiros** são variáveis que armazenam o endereço de memória de outra variável.
+- **Ponteiros** são variáveis que armazenam o endereço de memória de uma outra variável.
 - Exemplo de declaração de ponteiro:
   ```cpp
   int x = 9;
   int *pt = &x;
   ```
 - **&** é usado para obter o endereço de uma variável.
+
+- ![TABELA EXCEL](https://docs.google.com/spreadsheets/d/1zgsKqh5UbhyGN3BkQBueWcM0Ubp_ikUC9deWb7eIvBs/edit?usp=sharing)
 
 ### Atenção:
 - Manipulação direta de memória pode ser perigosa, devendo ser feita com cautela para evitar falhas e instabilidade do sistema.
@@ -102,7 +104,65 @@ void loop() {}
 
 ---
 
-## Funções dos Pinos do ESP32
+### Exemplo 5
+
+```
+#include <DHT.h>
+
+// Definindo o pino do sensor e o tipo (DHT22)
+#define pinDHT 4
+#define modeloSensor DHT22
+
+// Instanciando o sensor DHT
+DHT meudht(pinDHT, modeloSensor);
+
+// Variáveis para controle de tempo e leituras
+const unsigned long intervaloLeitura = 2000; // 2 segundos
+unsigned long ultimoTempoLeitura = 0;
+int indice = 0;
+const int numLeituras = 5;
+float temperaturas[numLeituras] = {0};
+
+// Função para calcular a média das leituras de temperatura
+float calcularMedia(float *leituras, int tamanho) {
+    float soma = 0.0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += *(leituras + i);  // Usando ponteiro para acessar os valores
+    }
+    return soma / tamanho;
+}
+
+void setup() {
+    Serial.begin(115200);
+    meudht.begin();
+}
+
+void loop() {
+    unsigned long tempoAtual = millis();
+
+    // Verifica se o intervalo de 2 segundos passou
+    if (tempoAtual - ultimoTempoLeitura >= intervaloLeitura) {
+        ultimoTempoLeitura = tempoAtual;  // Atualiza o último tempo de leitura
+
+        // Lê a temperatura e armazena no array usando o índice atual
+        temperaturas[indice] = meudht.readTemperature();
+
+        // Avança o índice, e reseta para 0 se chegar ao número de leituras
+        indice = (indice + 1) % numLeituras;
+
+        // Calcula a média após preencher o array
+        float media = calcularMedia(temperaturas, numLeituras);
+
+        // Exibe a média no monitor serial
+        Serial.print("Media de Temperatura: ");
+        Serial.println(media);
+    }
+
+    // Outras tarefas podem ser executadas aqui sem interrupção
+}
+
+
+```
 
 
 ---
