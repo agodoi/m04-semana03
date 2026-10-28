@@ -4,7 +4,7 @@
 
 Meu regime de trabalho é de horário parcial. Nesses dois dias, estarei disponível para atendê-los!
 
-# Semana 03 — Ponteiros, arrays e leitura de botão com debounce no ESP32
+# Semana 03: Ponteiros, arrays e leitura de botão com debounce no ESP32
 
 Nesta semana, estudaremos como variáveis e arrays são armazenados na memória e como utilizar ponteiros para acessar seus valores.
 
