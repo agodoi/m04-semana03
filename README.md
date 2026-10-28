@@ -6,7 +6,7 @@ Meu regime de trabalho é de horário parcial. Nesses dois dias, estarei dispon�
 
 # Semana 03: Ponteiros, arrays e leitura de botão com debounce no ESP32
 
-Nesta semana, estudaremos como variáveis e arrays são armazenados na memória e como utilizar ponteiros para acessar seus valores.
+Nesta instrução, estudaremos como variáveis e arrays são armazenados na memória e como utilizar ponteiros para acessar seus valores.
 
 Também aprenderemos a identificar pinos adequados para conectar um botão ao ESP32 e a tratar o repique dos contatos mecânicos, conhecido como *bounce*. Essa leitura permitirá selecionar opções de um menu com um avanço por acionamento.
 
