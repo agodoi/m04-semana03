@@ -199,16 +199,21 @@ Mesmo que os endereços apareçam próximos em uma execução, não devemos conc
 char xyz[3] = {'x', 'y', 'z'};
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
-    Serial.printf("Endereco de xyz[0]: %p\n", (void *)&xyz[0]);
-    Serial.printf("Endereco de xyz[1]: %p\n", (void *)&xyz[1]);
-    Serial.printf("Endereco de xyz[2]: %p\n", (void *)&xyz[2]);
+    Serial.print("Endereco de xyz[0]: 0x");
+    Serial.println((unsigned int)&xyz[0], HEX);
+
+    Serial.print("Endereco de xyz[1]: 0x");  
+    Serial.println((unsigned int)&xyz[1], HEX);
+
+    Serial.print("Endereco de xyz[2]: 0x");
+    Serial.println((unsigned int)&xyz[2], HEX);
 
     Serial.print("Tamanho de cada elemento em bytes: ");
     Serial.println(sizeof(xyz[0]));
 
-    Serial.print("Tamanho total do array em bytes: ");
+    Serial.print("Tamanho total do array em bytes: "); 
     Serial.println(sizeof(xyz));
 }
 
