@@ -147,9 +147,10 @@ O especificador `%p` permite apresentar um ponteiro. A conversão para `void*` f
 char x = 'A';
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
-    Serial.printf("Endereco de x: %p\n", (void *)&x);
+    Serial.print("Endereco de x: 0x");
+    Serial.println((unsigned int)&x, HEX);
 
     Serial.print("Valor de x: ");
     Serial.println(x);
