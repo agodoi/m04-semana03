@@ -267,11 +267,16 @@ int xyz[3] = {222, 333, 444};
 int *pt = &xyz[2];
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
-    Serial.printf("Endereco da variavel pt: %p\n", (void *)&pt);
-    Serial.printf("Endereco armazenado em pt: %p\n", (void *)pt);
-    Serial.printf("Endereco de xyz[2]: %p\n", (void *)&xyz[2]);
+    Serial.print("Endereco da variavel pt: 0x");
+    Serial.println((unsigned int)&pt, HEX);
+
+    Serial.print("Endereco armazenado em pt: 0x");
+    Serial.println((unsigned int)pt, HEX);
+
+    Serial.print("Endereco de xyz[2]: 0x");
+    Serial.println((unsigned int)&xyz[2], HEX);
 
     Serial.print("Valor apontado por pt: ");
     Serial.println(*pt);
