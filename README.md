@@ -173,11 +173,16 @@ char y = 'B';
 char z = 'C';
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
-    Serial.printf("Endereco de x: %p\n", (void *)&x);
-    Serial.printf("Endereco de y: %p\n", (void *)&y);
-    Serial.printf("Endereco de z: %p\n", (void *)&z);
+    Serial.print("Endereco de x: 0x");
+    Serial.println((unsigned int)&x, HEX);
+
+    Serial.print("Endereco de y: 0x");
+    Serial.println((unsigned int)&y, HEX);
+
+    Serial.print("Endereco de z: 0x");
+    Serial.println((unsigned int)&z, HEX);
 }
 
 void loop() {
